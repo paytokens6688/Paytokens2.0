@@ -1,0 +1,41 @@
+// 变量
+// 输入框提示文字样式
+$inputBg: #b7bac3;
+// 全局字体大小
+$htmlFontSize: 28px;
+// 全局字体颜色
+$htmlFontColor: #222;
+// 全局背景色
+$globalBackgroundColor: #fff;
+// 进入时前景色
+$initPageFristColor: #4e60f2;
+// 主题颜色
+$mainColor: #2a53fd;
+// 深蓝色
+$darkBlue: #132b8c;
+// 浅灰色
+$lowGray: #b7bac3;
+// 灰色
+$gray: #9da2b2;
+// 列表底边灰色
+$listBottomGray: #eaecf1;
+
+// 代碼塊
+// 文字颜色渐变样式
+@mixin textChangeColor ($direction: right bottom, $startColor: #6f8df5, $endColor: #2634e5) {
+  color: $startColor;
+  background-image: -webkit-gradient(linear, 0 0, $direction, from($startColor), to($endColor));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+// 块背景渐变样式
+@mixin bgChangeStyle ($direction, $startColor, $endColor) {
+  background: -webkit-gradient(linear, $direction, from($startColor), to($endColor));
+  background: -webkit-linear-gradient($direction, $startColor, $endColor);
+  background: -moz-linear-gradient($direction, $startColor, $endColor);
+  background: linear-gradient(to $direction, $startColor, $endColor);
+}
+// 元素底部阴影
+@mixin eleBottomShadown () {
+  box-shadow: 0 0 18px 3px rgba(27, 55, 173, 0.1);
+}

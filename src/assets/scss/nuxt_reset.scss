@@ -1,0 +1,33 @@
+@import '@/assets/scss/public.scss';
+#__nuxt {
+  height: 100%;
+  overflow: hidden;
+  #__layout {
+    height: 100%;
+    overflow: hidden;
+    .app_page_box {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative;
+      background: $globalBackgroundColor;
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 100;
+        opacity: 1;
+        transition: all 0.3s;
+        background: $globalBackgroundColor;
+        @include bgChangeStyle(right bottom, #368ffa, #8a00e9);
+      }
+      &.default-bg-none:before {
+        opacity: 0;
+      }
+      &.default-bg-none.default-bg-hid:before {
+        display: none;
+      }
+    }
+  }
+}

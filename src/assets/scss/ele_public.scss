@@ -1,0 +1,31 @@
+// 元素样式
+@import './public';
+
+.submit-button {
+  display: block;
+  width: 100%;
+  height: 88px;
+  line-height: 88px;
+  font-size: 30px;
+  background: $mainColor;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.what-faq {
+  text-align: center;
+  font-size: 28px;
+  color: $gray;
+  line-height: 40px;
+  .icon-iconfontquestion {
+    font-size: 34px;
+    display: inline-block;
+    padding-right: 10px;
+  }
+}
+
+.alert-box-title {
+  font-size: 34px;
+  font-weight: bolder;
+  padding-bottom: 20px;
+}
